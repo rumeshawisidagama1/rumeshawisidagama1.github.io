@@ -1,0 +1,130 @@
+:root{
+    --color_first: rgb(255, 255, 255);
+
+    --color_second: rgb(8, 255, 49);
+
+    --color_third: rgb(204, 38, 185);
+    --color_firth: rgb(26, 134, 187);
+    --color_forth: #224b4c;
+
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color_first);
+}
+
+body {
+    background-color: var(--color_forth);
+
+}
+/* Style the header */
+header {
+    text-align: center;
+}
+#title{
+    font-size: 20vw;
+    margin-top: 0;
+}
+/* Nav */
+nav {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+nav li {
+    font-size: x-large;
+    font-weight: bold;
+    color: #FAF0E6;
+    display: inline-block;
+    margin: 1rem;
+    }
+/* Profile pic */
+#profile_pic_container{
+    text-align: center;
+}
+#profile_pic {
+    position: relative;
+    /* visibility: hidden; */
+    /* overflow: hidden; */
+    width: 14rem;
+    height: auto;
+    border-radius: 50%;
+    margin-top:3rem;
+
+}
+#profile_pic_container::before{
+    content: "0";
+    position: absolute;
+    text-align: center;
+    height: 20rem; /* #Profile_pic height+margin*2 */
+    width: 20rem;
+    left: calc(50% - 10rem); /* halfway point - width*0.5 as it spins from the center */
+    background: linear-gradient(0deg, var(--color_second),var(--color_third), var(--color_firth) );
+    z-index: -1;
+    filter: blur(5rem);
+    border-radius: 50%;
+    animation: colorShift 3s linear infinite;
+    transform: translateX(-50%);
+}
+/* Define the color-shifting animation */
+@keyframes colorShift {
+    0% {
+        transform: rotate(0deg); /* Start with one color */
+    }
+    100% {
+        transform: rotate(360deg);  /* Return to the initial color */
+    }
+}
+
+/* #Style the main content */
+.Sections{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#Me {
+    justify-content: center;
+    align-items: center;
+}
+#Me div{
+    /* background-color: var(--color_second); */
+    /* color: var(--color_forth); */
+    border-radius: 0.2rem;
+    padding: 2vw;
+    width: 50vw;
+    box-shadow: 1rem 1rem 1rem black;
+    /* font-style: italic; */
+    border-color: black;
+    border-width: 0.1rem;
+    border-style: solid;
+}
+#Me h1 {
+    color: var(--color_second);
+}
+
+/* Style headings */
+h1 {
+    font-size: x-large;
+    margin: 0;
+}
+
+p {
+    font-size: large;
+}
+
+/* Style links */
+a:link{
+    color: inherit;
+    text-decoration-line: inherit;
+}
+a:hover {
+    color: #B9B4C7;
+}
+
+/* Style the footer */
+footer {
+    padding: 10px;
+    text-align: center;
+}
