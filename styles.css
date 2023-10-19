@@ -1,5 +1,5 @@
 :root{
-    --color_first: rgb(255, 255, 255);
+    --color_first: rgb(0, 0, 0);
 
     --color_second: rgb(8, 255, 49);
 
@@ -13,10 +13,14 @@ html, body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--color_first);
+    scroll-behavior: smooth;
+    transition: 6s;
 }
 
 body {
-    background-color: var(--color_forth);
+    background: linear-gradient(0deg, rgba(44, 44, 221, 0.384) );
+    width: 100vw;
+    height: 100vh;
 
 }
 /* Style the header */
@@ -24,25 +28,33 @@ header {
     text-align: center;
 }
 #title{
-    font-size: 20vw;
+    font-size: 12vw;
     margin-top: 0;
+    animation: fadeIn 0.8s both;
 }
 /* Nav */
 nav {
     bottom: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
+    background-color: linear-gradient(red, blue);
+    background: linear-gradient(0deg, rgba(44, 44, 221, 0.384), transparent );
+    z-index: 1;
+    backdrop-filter: blur(0.2rem);
+
 }
+
 nav li {
     font-size: x-large;
     font-weight: bold;
-    color: #FAF0E6;
+    color: #20201f;
     display: inline-block;
     margin: 1rem;
     }
 /* Profile pic */
 #profile_pic_container{
     text-align: center;
+    animation: fadeIn 0.8s both;
 }
 #profile_pic {
     position: relative;
@@ -52,6 +64,7 @@ nav li {
     height: auto;
     border-radius: 50%;
     margin-top:3rem;
+
 
 }
 #profile_pic_container::before{
@@ -128,3 +141,26 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translatey(30vh);
+    }
+    80% {
+        opacity: 0.9;
+      }
+    100% {
+      opacity: 1;
+    }
+  }
+
+#linked_in{
+    height: auto;
+    width: 1.5vh;
+    background-color: none;
+
+}
+#linked_in:hover {
+      fill: darken(rgb(0, 98, 255), 20%);
+  }
