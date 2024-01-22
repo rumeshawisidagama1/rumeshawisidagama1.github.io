@@ -182,7 +182,7 @@ nav li {
 .card-item-date {
     font-size: medium;
     font-style: italic;
-    width: 70vw;
+    width:0vw 7;
     color: #35273d;
     line-height: 1.5;
 }
@@ -221,7 +221,12 @@ nav li {
     /* width: 40vw; */
 }
 
-
+.skill-title {
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:#20201f;
+}
 
 #Projects_container{
     margin: 0rem;
@@ -229,9 +234,9 @@ nav li {
     border: 30px;
     /* box-shadow: none; */
     width: 70%;
-    padding: 30px;
-    margin: 30vh;
-    margin-top: -10px;
+    padding: 20px;
+    margin: 20vh;
+    margin-top: 150px;
 }
 #Projects{
     height: 60vh;
@@ -241,7 +246,7 @@ nav li {
 
 /* footer{
     content: "";
-    height: 10rem;
+    height: 11rem;
     width: 10%;
 } */
 
