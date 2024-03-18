@@ -1,8 +1,9 @@
 :root {
-    --color_first: rgb(70, 42, 89);
-    --color_second: rgb(29, 26, 166);
-    --color_third: rgb(26, 134, 187);
-    --color_fourth: #224b4c;
+    --mid: rgb(216, 226, 216);
+    --dark: #2a3e2d;
+    --light: rgb(239, 245, 236);
+    --white: #ffffff;
+    --black: var(--black);
 }
 
 html,
@@ -10,157 +11,129 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
-    color: #45454a;
+    color: var(--black);
     scroll-behavior: smooth;
     transition: 6s;
 }
 
-body {
-    background: #b6c5f2;
-}
-
 /* Style the header */
-header {
-    text-align: center;
-    color: rgb(48, 48, 48);
-}
 
 #title {
+    text-align: left;
     font-size: 5vw;
-    padding-top: 10px;
-    color: rgb(48, 48, 48);
-    animation: fadeIn 0.8s both;
+    color: var(--dark);
 }
 
 /* Nav */
-nav {
-    /* border: 0.5rem solid blue; */
-    bottom: 0;
+#nav_container {
+    margin-top: 1vh;
+    margin-left: 1vw;
+    width: 97vw;
+    top: 0;
     position: fixed;
-    width: 100%;
-    background-color: linear-gradient(red, blue);
-    background: linear-gradient(0deg, rgba(84, 84, 165, 0.384), transparent);
+    height: 7vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: var(--light);
     z-index: 1;
-    backdrop-filter: blur(0.2rem);
-    justify-content: space-between;
-    text-align: center;
+    animation: fadefromtop 1.5s both;
+}
+nav ul{
+    height: 100%;
 }
 
 nav li {
     /* border: 0.1rem solid red; */
     display: inline-block;
     list-style: none;
-    font-size: x-large;
-    font-weight: bold;
-    color: #20201f;
+    font-size: large;
+    color: var(--black);
+    padding: 1vh;
     margin: 1rem;
-}
-
-/* Profile pic */
-#profile_pic_container {
-    text-align: center;
-    animation: fadeIn 1s both;
-}
-
-#profile_pic {
-    position: relative;
-    width: 14rem;
-    height: auto;
+    /* background-color: green; */
+    font-weight: bold;
     border-radius: 50%;
-    margin-top: 3rem;
-
-
+}
+nav li:hover{
+    background-color: var(--dark);
+    border-radius: 2px;
+    color: var(--white);
 }
 
-#profile_pic_container::before {
-    content: "";
-    position: absolute;
-    text-align: center;
-    height: 20rem;
-    /* #Profile_pic height+margin*2 */
-    width: 20rem;
-    left: calc(50% - 10rem);
-    /* halfway point - width*0.5 as it spins from the center */
-    background: linear-gradient(0deg, var(--color_first), var(--color_second), var(--color_third), var(--color_fourth));
-    z-index: -1;
-    filter: blur(5rem);
-    border-radius: 50%;
-    animation: colorShift 3s linear infinite;
-    transform: translateX(-50%);
-}
-
-/* Define the color-shifting animation */
-@keyframes colorShift {
-    0% {
-        transform: rotate(0deg);
-        /* Start with one color */
-    }
-
-    100% {
-        transform: rotate(360deg);
-        /* Return to the initial color */
-    }
-}
-
-/* #Style the main content */
 .Sections {
-    height: 70vh;
-    width: 100%;
-    /* overflow-x: hidden; */
+    margin: 1rem;
+    padding: 5vh;
+    height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    perspective: 1000px;
 }
 
-.containers{
-    z-index: 2;
-    position: relative;
-    margin: 0px;
-    border-radius: 1rem;
-    padding: 3rem;
-    box-shadow: 1rem 1rem 1rem rgb(66, 102, 132);
-    border: 0.1rem solid rgba(235, 167, 229, 0.205);
-    background: rgb(148, 175, 207);
+/* Profile pic */
+#profile_pic_container {
+    animation: fadeIn 1s both;
+    height: 80vh;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    float: right;
 }
 
-.Sections::before{
+#MeAbout {
+    float: left;
+    width: 50%;
+    font-size: small;
+}
+
+#profile_pic {
+    /* width: 100%; */
+    height: 100%;
+    border: 1vh solid var(--dark);
+}
+#Me{
+    margin-top: 9vh;
+    height: 89vh;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    animation: fadeIn 1.5s both;
+    /* background-color: rgb(216, 226, 216); use this or Me::before */
+}
+#Me::before {
     content: "";
+    z-index: -2;
+    top:0;
     position: absolute;
-    margin: auto;
-    margin-bottom: 200px;
-    background-color: rgb(116, 161, 217);
-    width: 30vw;
-    height: 30vw;
-    top: calc(35vh - 15vw);
-    left: calc(50vw - 15vw);
-    background: linear-gradient(0deg, var(--color_first), var(--color_third), var(--color_fourth), var(--color_second));
-    animation: colorShift 3s linear infinite;
-    filter: blur(14rem);
-    border-radius: 50%;
+    width: 97vw;
+    padding-top: 70vh;
+    background-color: var(--mid);
+}
+#Me div {
+    /* border:5px solid #224b4c; */
+    padding: 1rem;
+}
+#Me h1{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
-#Me div {
-    width: 70vw;
-    height: 130px;
-    font-size: large;
-    margin-top: -20px;
-    color: rgb(48, 48, 48);
-}
 
 #Experience_container h1 {
     text-align: center;
-    font-size: vw;
     padding-bottom: 10px;
-    margin-top: -20px;
 }
 
+#Experience {
+    /* padding-top: 5vh; */
+    background-color: var(--mid);
+}
 .card-item {
     position: sticky;
     padding-left: 0px;
     padding-right: 0px;
-    padding-bottom: -20px;
     z-index: 1;
     height: 100px;
 }
@@ -169,13 +142,13 @@ nav li {
     font-size: medium;
     font-weight: bold;
     margin-bottom: 5px;
-    color:#20201f;
+    color:var(--black);
 }
 
 .card-item-desc {
     font-size: medium;
     width: 70vw;
-    color: #45454a;
+    color: var(--black);
     line-height: 1.5;
 }
 
@@ -183,48 +156,60 @@ nav li {
     font-size: medium;
     font-style: italic;
     width:0vw 7;
-    color: #35273d;
+    color: var(--black);
     line-height: 1.5;
 }
 
 #Skills_container h1 {
-    padding-bottom: 2rem;
     text-align: center;
     width: 100%;
     justify-content: space-evenly;
 }
 
-.Skills_container_container {
+.skills_list {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-grow: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    gap: 1vw;
+    justify-content: center;
 }
 #Skills_container{
     margin: 0rem;
-    /* background: none; */
     border: none;
-    /* box-shadow: none; */
-    width: 70%;
+    width: 100%;
+    max-width: 1300px;
     padding: none;
 }
 
 .skill{
-    flex-grow: inherit;
-    background-color: rgb(143, 193, 229);
-    border-radius: 1rem;
-    padding: .5rem;
-    margin: .5rem;
-    width: 45%;
-    margin-bottom: 10px;
-    /* width: 40vw; */
+    display: flex;
+    justify-content: end;
+    padding: 1vw;
+    width: 400px;
 }
 
+.skill-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    margin-right: 1vw;
+    height: 100%;
+}
+.skill-img {
+    transition: transform 1s ease;
+    width: 80%;
+}
+.skill-img:hover{
+    transform: scale(1.3);
+}
+.skill-body{
+    width: 100%;
+
+}
 .skill-title {
     font-size: medium;
     font-weight: bold;
-    margin-bottom: 5px;
     color:#20201f;
 }
 
@@ -239,52 +224,19 @@ nav li {
     margin-top: 150px;
 }
 #Projects{
-    height: 60vh;
+    height: auto;
 }
 
 
 
-/* footer{
+footer{
     content: "";
-    height: 11rem;
-    width: 10%;
-} */
-
-
-
-
-
-
-#Home {
-    /* background-color: #224b4c; */
-    background: linear-gradient(0deg, rgba(255, 0, 0, 0.100), white);
-}
-
-#Me {
-    /* background-color: #224b4c; */
-    background: linear-gradient(0deg, rgba(255, 166, 0, 0.100), rgba(255, 0, 0, 0.100));
-}
-
-#Experience {
-    background: linear-gradient(0deg, rgba(255, 255, 0, 0.100), rgba(255, 166, 0, 0.100));
-}
-
-#Skills {
-    background: linear-gradient(0deg, rgba(0, 0, 255, 0.100), rgba(255, 255, 0, 0.100));
-}
-
-#Projects {
-    background: linear-gradient(0deg, rgba(163, 13, 233, 0.100), rgba(0, 0, 255, 0.100));
-}
-
-#Contact {
-    background: linear-gradient(0deg, rgba(238, 130, 238, 0.100), rgba(163, 13, 233, 0.100), );
+    height: 10vh;
 }
 
 /* Style headings */
 h1 {
-    font-size: large;
-    margin: 0;
+    font-size: x-large;
     text-align: center;
     color: rgb(43, 43, 43)
 }
@@ -311,32 +263,44 @@ footer {
 
 @keyframes fadeIn {
     0% {
-        opacity: 0;
+        opacity: 0.5;
         transform: translatey(30vh);
     }
 
     100% {
         opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadefromtop {
+    0% {
+        opacity: 0;
+        transform: translatex(100vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
     }
 }
 
 .animation {
-    animation-timeline: view(block 75% 10%);
-    animation-name: flip;
+    animation-timeline: view(block 100% 0%);
+    animation-name: fadeInFromBottom;
     animation-fill-mode: both;
     animation-duration: 1ms;
     /* Firefox requires this to apply the animation */
     animation-timing-function: linear;
 }
 
-@keyframes flip {
+@keyframes fadeInFromBottom {
     0% {
-        transform: translate(0%, 0%) rotateX(-90deg);
-        opacity: 0;
+        transform: translatey(30vh);
+        opacity: 0.4;
     }
 
     100% {
-        transform: translate(0%, 0%) rotateX(0deg);
         opacity: 1;
     }
 }
@@ -346,8 +310,4 @@ footer {
     width: 1.5vh;
     background-color: none;
 
-}
-
-#linked_in:hover {
-    fill: darken(rgb(0, 98, 255), 20%);
 }

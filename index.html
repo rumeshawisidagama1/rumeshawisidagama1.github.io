@@ -13,34 +13,92 @@
     <div id="nav_container">
         <nav>
             <ul>
-                <li><a class="nav_link" href="#Home">Home</a></li>
                 <li><a class="nav_link" href="#Me">Me</a></li>
                 <li><a class="nav_link" href="#Experience">Experience</a></li>
                 <li><a class="nav_link" href="#Skills">Skills</a></li>
                 <li><a class="nav_link" href="#Projects">Projects</a></li>
-                <li><a class="nav_link" href="https://www.linkedin.com/in/rumesha-wisidagama-b24911130/" target="_blank">Contact <img id="linked_in" src="pics/linkedin_logo.svg"
-                            alt="A pretty smile"></a></li>
+                <li><a class="nav_link" href="https://www.linkedin.com/in/rumesha-wisidagama-b24911130/"
+                        target="_blank">Contact <img id="linked_in" src="pics/linkedin_logo.svg"></a></li>
             </ul>
         </nav>
     </div>
-    <section class="Sections" id="Home">
-        <header>
-            <script src="index.js"></script>
-            <div id="profile_pic_container">
-                <img id="profile_pic" src="https://media.licdn.com/dms/image/D4E03AQGwuKm4KbkuNA/profile-displayphoto-shrink_200_200/0/1703698370038?e=1715212800&v=beta&t=TnxcqzH2A2uNH_4eQPabQ72NbUnEsBzKtAVr4yEPHhk" alt="A pretty smile">
-            </div>
-            <br>
-            <br>
-            <h1 id="title">Rumesha</h1>
-            <h1 id="title">Wisidagama</h1>
-
-        </header>
-    </section>
     <main>
         <section class="Sections" id="Me">
-            <div class="animation containers">
-                <h1>About Me</h1>
-                <p>A highly organised and self-motivated Lead Data Analyst who thrives in a fast-paced and challenging work environment. Working as a data analyst in a B2B market research company, I am highly proficient in SQL, MS Excel and Tableau as I produce extensive talent management reports for various multinational companies. Additionally, I have excellent presenting skills and insight experience as my role involves presenting research insights and digital strategies to stakeholders. </p>
+            <script src="index.js"></script>
+            <div id="MeAbout">
+                <h1 id="title">Hi i'm Rumesha</h1>
+                <p>A highly organised and self-motivated Lead Data Analyst who thrives in a fast-paced and challenging
+                    work environment. Working as a data analyst in a B2B market research company, I am highly proficient
+                    in SQL, MS Excel and Tableau as I produce extensive talent management reports for various
+                    multinational companies. Additionally, I have excellent presenting skills and insight experience as
+                    my role involves presenting research insights and digital strategies to stakeholders. </p>
+            </div>
+            <div id="profile_pic_container">
+                <img id="profile_pic" src="pics/profile_pic.jpg" alt="A pretty smile">
+            </div>
+        </section>
+        <section class="Sections" id="Skills">
+            <div id="Skills_container" class="animation containers">
+                <h1>Skills</h1>
+                <div class="skills_list">
+                    <div class="skill">
+                        <div class="skill-img-container"><img class="skill-img" id="sql_logo" src="pics/skills/Sql_data_base_with_logo.svg"></div>
+                        <div class="skill-body">
+                            <h2 class="skill-title">SQL (2 years)</h2>
+                            <p class="skill-desc">I manage our SQL database usins methodologies; such as VIEWS, STORED
+                                PROCEDURES, TRIGGERS, to identify metrics that support reports.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-img-container"><img class="skill-img" id="office_logo" src="pics/skills/Microsoft_Office_logo.svg"></div>
+                        <div class="skill-body">
+                            <h2 class="skill-title">MS Office Suite (6 years)</h2>
+                            <p class="skill-desc">I am proficient in utilising the Microsoft Office Suite; particularly
+                                MS Execel, PowerPoint and Access, for data analysis, presenting findings and streamlining business
+                                processes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-img-container"><img class="skill-img" id="tableau_logo" src="pics/skills/tableau-software.svg"></div>
+                        <div class="skill-body">
+                            <h2 class="skill-title">Tableau (2 years)</h2>
+                            <p class="skill-desc">I use Tableau to connect to our SQL servers, clean and transform data,
+                                and create dynamic visualizations that effectively communicate trends and patterns in
+                                dashboards.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-img-container"><img class="skill-img" id="google_col_logo" src="pics/skills/Google_Colaboratory_Logo.svg"></div>
+                        <div class="skill-body">
+                            <h2 class="skill-title">Google Colaboratory (2 years)</h2>
+                            <p class="skill-desc">I utilise Google Colaboratory for collaborative coding projects to
+                                access and thematically classify large datasets of qualitative data into aggregate quantitative
+                                measures.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-img-container"><img class="skill-img" id="spss_logo" src="pics/skills/ibm_spss_logo.svg"></div>
+                        <div class="skill-body">
+                            <h2 class="skill-title">IBM SPSS Statistics (5 years)</h2>
+                            <p class="skill-desc">I primarily used SPSS in my studies to conduct advanced statistical
+                                analyses, including descriptive statistics, ANOVA, regression, factor analysis, etc.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-img-container"><img class="skill-img" id="python_logo" src="pics/skills/python-logo.svg"></div>
+                        <div class="skill-body">
+                            <h2 class="skill-title">Python (1 year)</h2>
+                            <p class="skill-desc">I apply Python in data analysis by utilising libraries such as Pandas
+                                and NumPy to clean, manipulate, and analyse large datasets.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="Sections" id="Experience">
@@ -49,83 +107,71 @@
                 <br>
                 <div class="card-timeline">
                     <div class="card-item-title">Lead Data Analyst at Link Humans</div>
-                        <div class="card-item-date">January 2023 - Present</div>
-                        <div class="card-item-desc">
-                        • Analysing a high volume of qualitative and quantitative data using a aggregate system of Microsft Excel, SQL, Tableau and thematic analysis to produce highly-detailed reports on employer market trends for global companies from various industries, including Technology, FMCG, Finance and Pharmaceuticals 
-                            <br>• Leading key presentations focussed on providing succinct analysis insights and proposing clear actionable employer branding strategies to key client stakeholders 
-                            <br>• Developing high-level project management skills when delegating project deadlines to the analysis team; which involves coordinating the analysts’ project schedules and assigning the priority level of each project </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="card-item-title">Data Analyst at Link Humans</div>
-                        <div class="card-item-date">January 2022 - December 2022</div>
-                        <div class="card-item-desc">
-                            • Meeting tight deadlines for multiple ongoing projects whilst being highly detail-oriented and accurate when analysing and reporting data for reports, research articles and client presentations
-                            <br>• Developing high proficiency with Microsoft Excel and Tableau from using it to produce the Employer Brand Index and relevant visualisations for clients
-                            <br>• Writing and running SQL database management queries and Google Colab classifiers to clean and manipulate the data during analysis to identify insights to include in the report, dashboard and stakeholder presentations </div>
+                    <div class="card-item-date">January 2023 - Present</div>
+                    <div class="card-item-desc">
+                        • Analysing a high volume of qualitative and quantitative data using a aggregate system of
+                        Microsft Excel, SQL, Tableau and thematic analysis to produce highly-detailed reports on
+                        employer market trends for global companies from various industries, including Technology, FMCG,
+                        Finance and Pharmaceuticals
+                        <br>• Leading key presentations focussed on providing succinct analysis insights and proposing
+                        clear actionable employer branding strategies to key client stakeholders
+                        <br>• Developing high-level project management skills when delegating project deadlines to the
+                        analysis team; which involves coordinating the analyst project schedules and assigning the
+                        priority level of each project
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="Sections" id="Skills">
-            <div id="Skills_container" class="animation containers">
-                <h1>Skills</h1>
-                <div class="Skills_container_container">
-                    <div class="skill">
-                        <div class="skill-title">SQL (2 years)</div>
-                        <div class="skill-desc">I manage our SQL database usins methodologies; such as VIEWS, STORED PROCEDURES, TRIGGERS, to identify metrics that support reports.</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-title">MS Office Suite (6 years)</div>
-                        <div class="skill-desc">I am proficient in utilising the Microsoft Office Suite; particularly MS Execel, PowerPoint and Access, for data analysis, presenting findings and streamlining business processes.</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-title">Tableau (2 years)</div>
-                        <div class="skill-desc">I use Tableau to connect to our SQL servers, clean and transform data, and create dynamic visualizations that effectively communicate trends and patterns in dashboards.</div>
-                    </div>
-                        <div class="skill">
-                        <div class="skill-title">Google Colaboratory (2 years)</div>
-                        <div class="skill-desc">I utilise Google Colaboratory for collaborative coding projects to access and thematically classify large datasets of qualitative data into aggregate quantitative measures.</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-title">IBM SPSS Statistics (5 years)</div>
-                        <div class="skill-desc">I primarily used SPSS in my studies to conduct advanced statistical analyses, including descriptive statistics, ANOVA, regression, factor analysis, etc.</div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-title">Python (1 year)</div>
-                        <div class="skill-desc">I apply Python in data analysis by utilising libraries such as Pandas and NumPy to clean, manipulate, and analyse large datasets.</div>
-                    </div>
+                <br>
+                <br>
+                <div class="card-item-title">Data Analyst at Link Humans</div>
+                <div class="card-item-date">January 2022 - December 2022</div>
+                <div class="card-item-desc">
+                    • Meeting tight deadlines for multiple ongoing projects whilst being highly detail-oriented and
+                    accurate when analysing and reporting data for reports, research articles and client presentations
+                    <br>• Developing high proficiency with Microsoft Excel and Tableau from using it to produce the
+                    Employer Brand Index and relevant visualisations for clients
+                    <br>• Writing and running SQL database management queries and Google Colab classifiers to clean and
+                    manipulate the data during analysis to identify insights to include in the report, dashboard and
+                    stakeholder presentations
                 </div>
             </div>
         </section>
         <section class="Sections" id="Projects">
             <div id="Projects_container" class="animation containers">
-            <h1>Projects</h1>
-            <br>
-            <br>
-            <div class="Skills_container_container">
-                <div class="skill">
-                    <div class="skill-title">SQL- Creating and Managing Database for a Dog Daycare </div>
-                    <br><div class="skill-desc">In this project, I created a SQL database that consisted of data relevant to the running of a ficitious dog daycare business to help them manage certain business scenarios and data forecasting.</div>
+                <h1>Projects</h1>
+                <div class="Projects_list">
+                    <div class="project">
+                        <h2 class="project-title">SQL- Creating and Managing Database for a Dog Daycare </h2>
+                        <p class="project-desc">In this project, I created a SQL database that consisted of data relevant
+                            to the running of a ficitious dog daycare business to help them manage certain business
+                            scenarios and data forecasting.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <h2 class="project-title">Python- Creating Tic Tac Toe Game </h2>
+                        <p class="project-desc">I developed a robust and interactive Tic Tac Toe game with Jupyter
+                            Notebooks that implemented the game logic and allowed for two-player interactions.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <h2 class="project-title">Python- Demographic Data Analyser </h2>
+                        <p class="project-desc">I utilised Pandas to analyse a 1994 Census database to identify
+                            relationships and trends between certain demographic groups, particularly regarding
+                            occupation, education and economic status.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <h2 class="project-title">Tableau- Dashboard for Teens, Social Media & Technology PEW Research
+                            Findings 2018</h2>
+                        <p class="project-desc">I created a dashboard consisting of various graphs and tables to present
+                            the trends and findings from survey research conducted on social media and the types of
+                            technology used.
+                        </p>
+                    </div>
                 </div>
-                <div class="skill">
-                    <div class="skill-title">Python- Creating Tic Tac Toe Game </div>
-                    <div class="skill-desc">I developed a robust and interactive Tic Tac Toe game with Jupyter Notebooks that implemented the game logic and allowed for two-player interactions.</div>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">Python- Demographic Data Analyser </div>
-                    <div class="skill-desc">I utilised Pandas to analyse a 1994 Census database to identify relationships and trends between certain demographic groups, particularly regarding occupation, education and economic status.</div>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">Tableau- Dashboard for Teens, Social Media & Technology PEW Research Findings 2018</div>
-                    <div class="skill-desc">I created a dashboard consisting of various graphs and tables to present the trends and findings from survey research conducted on social media and the types of technology used.</div>
-                </div>
-            </div>
             </div>
         </section>
-        <!-- <footer>
-            <h1></h1>
-        </footer> -->
+        <footer>
+        </footer>
     </main>
 </body>
 
