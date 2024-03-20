@@ -26,21 +26,31 @@ body {
 
 /* Nav */
 #nav_container {
-    margin-top: 1vh;
-    margin-left: 1vw;
-    width: 97vw;
+    width: 100%;
     top: 0;
     position: fixed;
     height: 7vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    animation: fadefromtop 1.5s both;
+    margin-top: 1vh;
+}
+nav{
+    height: 100%;
+    display: flex;
     justify-content: end;
     align-items: center;
     background: var(--light);
-    z-index: 1;
-    animation: fadefromtop 1.5s both;
+    margin: 1rem;
+    width: 100%;
 }
 nav ul{
+    /* background: var(--light); */
+    display: flex;
     height: 100%;
+
 }
 
 nav li {
@@ -63,7 +73,7 @@ nav li:hover{
 
 .Sections {
     margin: 1rem;
-    padding: 5vh;
+    padding:4rem;
     height: auto;
     width: auto;
     display: flex;
@@ -84,7 +94,6 @@ nav li:hover{
 #MeAbout {
     float: left;
     width: 50%;
-    font-size: small;
 }
 
 #profile_pic {
@@ -95,8 +104,6 @@ nav li:hover{
 #Me{
     margin-top: 9vh;
     height: 89vh;
-    margin-right: 1vw;
-    margin-left: 1vw;
     flex-direction: row;
     justify-content: space-evenly;
     animation: fadeIn 1.5s both;
@@ -107,8 +114,8 @@ nav li:hover{
     z-index: -2;
     top:0;
     position: absolute;
-    width: 97vw;
-    padding-top: 70vh;
+    width: 100%;
+    padding-top: 72vh;
     background-color: var(--mid);
 }
 #Me div {
@@ -139,21 +146,18 @@ nav li:hover{
 }
 
 .card-item-title {
-    font-size: medium;
     font-weight: bold;
     margin-bottom: 5px;
     color:var(--black);
 }
 
 .card-item-desc {
-    font-size: medium;
     width: 70vw;
     color: var(--black);
     line-height: 1.5;
 }
 
 .card-item-date {
-    font-size: medium;
     font-style: italic;
     width:0vw 7;
     color: var(--black);
@@ -174,7 +178,6 @@ nav li:hover{
     justify-content: center;
 }
 #Skills_container{
-    margin: 0rem;
     border: none;
     width: 100%;
     max-width: 1300px;
@@ -213,19 +216,39 @@ nav li:hover{
     color:#20201f;
 }
 
+#Projects{
+    text-align: center;
+}
+.project-title{
+    font-size: medium;
+}
+.project-img{
+    /* border: 10px solid red; */
+    height: 200px;
+}
 #Projects_container{
     margin: 0rem;
-    /* background: none; */
-    border: 30px;
+    /* border: 10px solid red; */
     /* box-shadow: none; */
     width: 70%;
     padding: 20px;
-    margin: 20vh;
-    margin-top: 150px;
+    /* margin: 20vh; */
+    /* margin-top: 150px; */
 }
-#Projects{
-    height: auto;
+.Projects_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, 400px); */
+    gap: 1vw;
+    justify-content: center;
 }
+.project {
+    width: 400px;
+}
+
 
 
 
@@ -242,7 +265,7 @@ h1 {
 }
 
 p {
-    font-size: large;
+    font-size: medium;
 }
 
 /* Style links */
@@ -286,7 +309,7 @@ footer {
 }
 
 .animation {
-    animation-timeline: view(block 100% 0%);
+    animation-timeline: view(block 100% 10%);
     animation-name: fadeInFromBottom;
     animation-fill-mode: both;
     animation-duration: 1ms;
@@ -297,7 +320,6 @@ footer {
 @keyframes fadeInFromBottom {
     0% {
         transform: translatey(30vh);
-        opacity: 0.4;
     }
 
     100% {
@@ -310,4 +332,41 @@ footer {
     width: 1.5vh;
     background-color: none;
 
+}
+
+@media (max-width: 1100px){
+    #profile_pic_container {
+        display: none;
+    }
+    #MeAbout {
+        float: left;
+        width: 75%;
+        /* border: 0.1rem solid red; */
+        height: auto;
+    }
+
+    #Me{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-color: var(--mid);
+    }
+    #Me::before{
+        display: none;
+    }
+
+    nav li {
+        font-size: small;
+        padding: 0rem;
+    }
+    nav ul {
+        justify-content: center;
+        align-items: center;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
